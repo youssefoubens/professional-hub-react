@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, ExternalLink, Send, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github, ExternalLink, Send, MessageCircle, Globe } from 'lucide-react';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -48,6 +47,13 @@ const ContactSection = () => {
 
   const socialLinks = [
     {
+      icon: Globe,
+      label: "Portfolio",
+      value: "youssefoubensaid.me",
+      href: "https://www.youssefoubensaid.me/",
+      color: "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+    },
+    {
       icon: Linkedin,
       label: "LinkedIn",
       value: "linkedin.com/in/youssef-ouben-said",
@@ -60,13 +66,6 @@ const ContactSection = () => {
       value: "github.com/youssef",
       href: "https://github.com/youssef",
       color: "bg-gray-800 hover:bg-gray-900"
-    },
-    {
-      icon: ExternalLink,
-      label: "Website",
-      value: "youssefoubensaid.me",
-      href: "https://youssefoubensaid.me",
-      color: "bg-purple-600 hover:bg-purple-700"
     }
   ];
 
