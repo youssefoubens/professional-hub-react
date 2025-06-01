@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -17,7 +16,6 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection
     { id: 'linkedin', label: 'LinkedIn' },
     { id: 'job-analysis', label: 'Job Analysis' },
     { id: 'resume', label: 'Resume' },
-    { id: 'portfolio', label: 'Portfolio' },
     { id: 'certificates', label: 'Certificates' },
     { id: 'contact', label: 'Contact' },
   ];

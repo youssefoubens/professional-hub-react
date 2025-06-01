@@ -7,7 +7,6 @@ import CommentarySection from '../components/CommentarySection';
 import LinkedInSection from '../components/LinkedInSection';
 import JobAnalysisSection from '../components/JobAnalysisSection';
 import ResumeSection from '../components/ResumeSection';
-import PortfolioSection from '../components/PortfolioSection';
 import CertificatesSection from '../components/CertificatesSection';
 import ContactSection from '../components/ContactSection';
 
@@ -43,11 +42,7 @@ const Index = () => {
           <ResumeSection />
         </section>
         
-        <section id="portfolio" className="min-h-screen bg-gradient-to-r from-purple-50 to-pink-50">
-          <PortfolioSection />
-        </section>
-        
-        <section id="certificates" className="min-h-screen bg-white">
+        <section id="certificates" className="min-h-screen bg-gradient-to-r from-purple-50 to-pink-50">
           <CertificatesSection />
         </section>
         

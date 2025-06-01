@@ -5,6 +5,7 @@ import {
   MiniMap,
   Controls,
   Background,
+  BackgroundVariant,
   useNodesState,
   useEdgesState,
   addEdge,
@@ -216,7 +217,7 @@ const MindMapSection = () => {
                 maskColor="rgb(240, 240, 240, 0.6)"
                 className="bg-white border border-gray-200 rounded-lg"
               />
-              <Background variant="dot" gap={20} size={1} color="#E5E7EB" />
+              <Background variant={BackgroundVariant.Dots} gap={20} size={1} color="#E5E7EB" />
             </ReactFlow>
           </div>
         </div>
