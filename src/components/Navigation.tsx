@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -29,6 +30,11 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection
     }
   };
 
+  const openPortfolio = () => {
+    window.open('https://www.youssefoubensaid.me/', '_blank');
+    setIsOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
       <div className="container mx-auto px-4">
@@ -52,6 +58,12 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection
                 {item.label}
               </button>
             ))}
+            <button
+              onClick={openPortfolio}
+              className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
+            >
+              Portfolio
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -79,6 +91,12 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, setActiveSection
                 {item.label}
               </button>
             ))}
+            <button
+              onClick={openPortfolio}
+              className="block w-full text-left px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
+            >
+              Portfolio
+            </button>
           </div>
         )}
       </div>
