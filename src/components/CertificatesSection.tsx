@@ -80,33 +80,6 @@ const CertificatesSection = () => {
     }
   ];
 
-  const activities = [
-    {
-      title: "Tech Conference Speaker",
-      event: "Morocco Dev Summit 2024",
-      date: "April 2024",
-      description: "Presented on 'AI Integration in Modern Web Applications'"
-    },
-    {
-      title: "Hackathon Winner",
-      event: "ENSET Innovation Challenge",
-      date: "February 2024",
-      description: "First place for AI-powered educational platform"
-    },
-    {
-      title: "Open Source Contributor",
-      event: "Various Projects",
-      date: "2023 - Present",
-      description: "Active contributor to open-source AI and web development projects"
-    },
-    {
-      title: "Mentoring Program",
-      event: "ENSET Peer Mentoring",
-      date: "2023 - Present",
-      description: "Mentoring junior students in programming and career development"
-    }
-  ];
-
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'networking':
@@ -141,14 +114,14 @@ const CertificatesSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Certificates & Activities
+            Professional Certificates
           </h2>
           <p className="text-lg text-gray-600">
-            Continuous learning through professional certifications and active participation in tech community
+            Continuous learning through professional certifications and expertise validation
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="max-w-4xl mx-auto">
           {/* Certificates Carousel */}
           <div className="space-y-6">
             <div className="flex items-center justify-between">
@@ -235,45 +208,16 @@ const CertificatesSection = () => {
                 />
               ))}
             </div>
-          </div>
 
-          {/* Activities Timeline */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-gray-900">Professional Activities</h3>
-            
-            <div className="space-y-6">
-              {activities.map((activity, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-3 h-3 bg-blue-600 rounded-full mt-2 mr-4"></div>
-                    <div className="flex-grow">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-semibold text-gray-900">{activity.title}</h4>
-                        <span className="text-sm text-gray-500">{activity.date}</span>
-                      </div>
-                      <p className="text-blue-600 font-medium mb-2">{activity.event}</p>
-                      <p className="text-gray-600 text-sm">{activity.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-200">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-200 mt-8">
               <h4 className="font-semibold text-gray-900 mb-3">Continuous Learning</h4>
               <p className="text-gray-700 text-sm mb-4">
                 I believe in lifelong learning and staying current with technology trends. 
                 My certification journey reflects my commitment to professional growth and expertise validation.
               </p>
-              <div className="grid grid-cols-2 gap-4 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-blue-600">{certificates.length}</div>
-                  <div className="text-sm text-gray-600">Certifications</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-purple-600">{activities.length}</div>
-                  <div className="text-sm text-gray-600">Activities</div>
-                </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-1">{certificates.length}</div>
+                <div className="text-sm text-gray-600">Professional Certifications</div>
               </div>
             </div>
           </div>
