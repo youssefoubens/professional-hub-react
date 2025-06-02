@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Linkedin, Github, ExternalLink, Send, MessageCircle, Globe } from 'lucide-react';
 
@@ -56,15 +57,15 @@ const ContactSection = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/youssef-ouben-said",
-      href: "https://linkedin.com/in/youssef-ouben-said",
+      value: "linkedin.com/in/ouben-said-youssef",
+      href: "https://www.linkedin.com/in/ouben-said-youssef/",
       color: "bg-blue-600 hover:bg-blue-700"
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/youssef",
-      href: "https://github.com/youssef",
+      value: "github.com/youssefoubens",
+      href: "https://github.com/youssefoubens",
       color: "bg-gray-800 hover:bg-gray-900"
     }
   ];
