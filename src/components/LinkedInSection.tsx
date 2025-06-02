@@ -95,7 +95,7 @@ const LinkedInSection = () => {
                 
                 <div className="space-y-3">
                   <button 
-                    onClick={() => window.open('https://linkedin.com/in/youssef-ouben-said', '_blank')}
+                    onClick={() => window.open('https://www.linkedin.com/in/ouben-said-youssef/', '_blank')}
                     className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center"
                   >
                     <Linkedin className="w-5 h-5 mr-2" />
@@ -103,7 +103,7 @@ const LinkedInSection = () => {
                   </button>
                   
                   <button 
-                    onClick={() => window.open('https://linkedin.com/in/youssef-ouben-said', '_blank')}
+                    onClick={() => window.open('https://www.linkedin.com/in/ouben-said-youssef/', '_blank')}
                     className="w-full bg-gray-100 text-gray-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-200 transition-colors flex items-center justify-center"
                   >
                     <ExternalLink className="w-5 h-5 mr-2" />
