@@ -40,7 +40,7 @@ const ResumeSection = () => {
     },
     {
       degree: "DEUST MIP",
-      school: "Faculty of Sciences Ben M'Sik",
+      school: "Errachidia",
       period: "2021 - 2023",
       status: "Completed"
     }
