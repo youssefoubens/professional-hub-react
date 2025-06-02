@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Download, Eye, User, Code, GraduationCap, Award } from 'lucide-react';
+import { Download, Eye, User, Code, GraduationCap, Award, FileText } from 'lucide-react';
 
 const ResumeSection = () => {
   const [activeTab, setActiveTab] = useState('human');
@@ -69,7 +68,7 @@ const ResumeSection = () => {
             Professional Resume
           </h2>
           <p className="text-lg text-gray-600">
-            Choose between human-friendly interactive version or ATS-optimized format
+            Choose between human-friendly interactive version, ATS-optimized format, or cover letter
           </p>
         </div>
 
@@ -97,6 +96,17 @@ const ResumeSection = () => {
             >
               <Download className="inline-block w-4 h-4 mr-2" />
               ATS-Optimized
+            </button>
+            <button
+              onClick={() => setActiveTab('cover')}
+              className={`px-6 py-3 rounded-lg font-medium transition-colors ${
+                activeTab === 'cover'
+                  ? 'bg-white text-blue-600 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              <FileText className="inline-block w-4 h-4 mr-2" />
+              Cover Letter
             </button>
           </div>
         </div>
@@ -207,7 +217,7 @@ const ResumeSection = () => {
               </div>
             </div>
           </div>
-        ) : (
+        ) : activeTab === 'ats' ? (
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-xl p-12 shadow-lg border border-gray-200">
               <div className="text-center mb-8 pb-6 border-b border-gray-200">
@@ -293,6 +303,79 @@ const ResumeSection = () => {
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
                   <Download className="inline-block w-5 h-5 mr-2" />
                   Download PDF Version
+                </button>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl p-12 shadow-lg border border-gray-200">
+              <div className="text-right mb-8">
+                <p className="text-gray-600">Youssef Ouben Said</p>
+                <p className="text-gray-600">Casablanca, Morocco</p>
+                <p className="text-gray-600">+212 654823654</p>
+                <p className="text-gray-600">oubenssaidyoussef@gmail.com</p>
+                <p className="text-gray-600 mb-6">{new Date().toLocaleDateString()}</p>
+              </div>
+
+              <div className="mb-8">
+                <p className="text-gray-600">Dear Hiring Manager,</p>
+              </div>
+
+              <div className="space-y-6 text-gray-700 leading-relaxed">
+                <p>
+                  I am writing to express my strong interest in the Software Developer position at your organization. 
+                  As a dedicated Software Engineering student at ENSET Mohammedia with hands-on experience in 
+                  full-stack development and artificial intelligence, I am excited about the opportunity to contribute 
+                  to your team's innovative projects.
+                </p>
+
+                <p>
+                  During my internship at VINCI Construction in Summer 2024, I gained valuable experience developing 
+                  internal tools and contributing to digitalization initiatives that improved operational efficiency. 
+                  This experience taught me the importance of creating practical, user-centered solutions that drive 
+                  real business value. Additionally, my freelance work has allowed me to build web applications and 
+                  AI solutions for various clients, honing my ability to adapt to different requirements and deliver 
+                  quality results within tight deadlines.
+                </p>
+
+                <p>
+                  My technical expertise spans modern web technologies including React.js, Spring Boot, and Python, 
+                  with additional experience in machine learning and DevOps practices. I have successfully developed 
+                  projects ranging from AI-powered chatbots using retrieval-augmented generation to computer vision 
+                  models for agricultural applications. My certifications in Cisco CCNA and Red Hat RHCSA demonstrate 
+                  my commitment to continuous learning and staying current with industry standards.
+                </p>
+
+                <p>
+                  What sets me apart is my ability to bridge the gap between complex technical concepts and practical 
+                  business solutions. I am passionate about creating clean, efficient code while maintaining a strong 
+                  focus on user experience and system reliability. My bilingual capabilities in French and Arabic, 
+                  combined with my technical skills, make me well-suited for collaborative, multicultural environments.
+                </p>
+
+                <p>
+                  I am particularly drawn to your organization because of its commitment to innovation and excellence 
+                  in software development. I am eager to bring my enthusiasm for technology, problem-solving skills, 
+                  and fresh perspective to your team. I would welcome the opportunity to discuss how my background 
+                  and passion for software development can contribute to your organization's continued success.
+                </p>
+
+                <p>
+                  Thank you for considering my application. I look forward to hearing from you and discussing how 
+                  I can contribute to your team's objectives.
+                </p>
+              </div>
+
+              <div className="mt-8">
+                <p className="text-gray-700">Sincerely,</p>
+                <p className="text-gray-900 font-semibold mt-4">Youssef Ouben Said</p>
+              </div>
+
+              <div className="text-center mt-8 pt-6 border-t border-gray-200">
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                  <Download className="inline-block w-5 h-5 mr-2" />
+                  Download Cover Letter PDF
                 </button>
               </div>
             </div>
